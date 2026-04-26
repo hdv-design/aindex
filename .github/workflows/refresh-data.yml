@@ -1,0 +1,41 @@
+name: Refresh AIndex data
+
+on:
+  schedule:
+    # 03:14 UTC every day
+    - cron: "14 3 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Pull live signals + score
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run refresh-data
+
+      - name: Commit refreshed data
+        run: |
+          if git diff --quiet data/tools.live.json; then
+            echo "No data changes; skipping commit."
+            exit 0
+          fi
+          git config user.name "aindex-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/tools.live.json
+          git commit -m "data: nightly refresh $(date -u +%FT%TZ)"
+          git push
