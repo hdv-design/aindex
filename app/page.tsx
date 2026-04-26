@@ -56,13 +56,16 @@ export default function Page() {
       <footer className="border-t border-[var(--ink)]">
         <div className="max-w-[1320px] mx-auto px-6 lg:px-10 py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <Logo size={18} />
-          <div className="text-[11.5px] text-[var(--ink-3)] tnum font-mono">
-            {(() => {
-              const t = new Date(GENERATED_AT);
-              const epoch = +t === 0;
-              if (epoch) return "Awaiting first refresh";
-              return `Last refresh · ${t.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })} · ${t.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", timeZoneName: "short" })}`;
-            })()}
+          <div className="flex items-center gap-5 text-[11.5px] text-[var(--ink-3)] tnum font-mono">
+            <a href="/methodology" className="hover:text-[var(--ink)]">Methodology</a>
+            <span className="text-[var(--ink-4)]">·</span>
+            <span>
+              {(() => {
+                const t = new Date(GENERATED_AT);
+                if (+t === 0) return "Awaiting first refresh";
+                return `Last refresh · ${t.toLocaleDateString("en-US", { month: "short", day: "numeric" })} · ${t.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", timeZoneName: "short" })}`;
+              })()}
+            </span>
           </div>
         </div>
       </footer>

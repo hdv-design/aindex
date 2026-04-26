@@ -1,0 +1,41 @@
+name: Weekly editorial rerank
+
+on:
+  schedule:
+    # Sundays 04:14 UTC — runs ~1 hour after the nightly data refresh
+    - cron: "14 4 * * 0"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  rerank:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Run editorial rerank
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: npm run editorial-rerank
+
+      - name: Commit editorial output
+        run: |
+          if git diff --quiet data/editorial.json; then
+            echo "No editorial changes; skipping commit."
+            exit 0
+          fi
+          git config user.name "aindex-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/editorial.json
+          git commit -m "data: weekly editorial rerank $(date -u +%FT%TZ)"
+          git push

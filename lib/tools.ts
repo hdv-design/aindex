@@ -54,9 +54,12 @@ export type Tool = ToolStatic & ToolMetrics & {
   /** Per-signal raw values, present when live data is loaded */
   liveSignals?: {
     githubStars?: number;
-    githubVelocity?: number; // 30d star delta
+    githubVelocity?: number;
     hnMentions?: number;
     hnPoints?: number;
+    redditMentions?: number;
+    redditScore?: number;
+    wikiViews30d?: number;
     fetchedAt?: string;
   };
 };

@@ -35,6 +35,9 @@ type RawSignals = {
   hnMentions?: number;
   hnPoints?: number;
   hnRecent?: number;
+  wikiViews30d?: number;
+  redditMentions?: number;
+  redditScore?: number;
 };
 
 // ——————————————————————————————————————
@@ -115,6 +118,47 @@ async function fetchHN(query?: string): Promise<Pick<RawSignals, "hnMentions" | 
 }
 
 // ——————————————————————————————————————
+// Wikipedia: 30-day pageviews
+// ——————————————————————————————————————
+async function fetchWiki(slug?: string): Promise<Pick<RawSignals, "wikiViews30d"> | null> {
+  if (!slug) return null;
+  try {
+    const fmt = (d: Date) => d.toISOString().slice(0, 10).replace(/-/g, "");
+    const start = fmt(ONE_MONTH_AGO);
+    const end = fmt(new Date(NOW.getTime() - 86400000));
+    const url = `https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia.org/all-access/all-agents/${encodeURIComponent(slug)}/daily/${start}/${end}`;
+    const r = await fetch(url, { headers: { "User-Agent": "aindex-refresh (https://ai-tool-index.vercel.app)" } });
+    if (!r.ok) return { wikiViews30d: 0 };
+    const data = await r.json();
+    const views = (data.items ?? []).reduce((sum: number, it: { views: number }) => sum + (it.views ?? 0), 0);
+    return { wikiViews30d: views };
+  } catch (err) {
+    console.warn(`  wiki ${slug} error:`, (err as Error).message);
+    return { wikiViews30d: 0 };
+  }
+}
+
+// ——————————————————————————————————————
+// Reddit: post mentions + total score in last month (public JSON, no auth)
+// ——————————————————————————————————————
+async function fetchReddit(query?: string): Promise<Pick<RawSignals, "redditMentions" | "redditScore"> | null> {
+  if (!query) return null;
+  try {
+    const url = `https://www.reddit.com/search.json?q=${encodeURIComponent(query)}&t=month&limit=100&sort=relevance`;
+    const r = await fetch(url, { headers: { "User-Agent": "aindex-refresh/1.0" } });
+    if (!r.ok) return { redditMentions: 0, redditScore: 0 };
+    const data = await r.json();
+    const posts: Array<{ data: { score: number; title: string } }> = data.data?.children ?? [];
+    if (posts.length === 0) return { redditMentions: 0, redditScore: 0 };
+    const totalScore = posts.reduce((s, p) => s + (p.data.score ?? 0), 0);
+    return { redditMentions: posts.length, redditScore: totalScore };
+  } catch (err) {
+    console.warn(`  reddit ${query} error:`, (err as Error).message);
+    return { redditMentions: 0, redditScore: 0 };
+  }
+}
+
+// ——————————————————————————————————————
 // Scoring — per-category z-scores, weighted blend
 // ——————————————————————————————————————
 type Enriched = CatalogEntry & { raw: RawSignals };
@@ -124,6 +168,9 @@ type Scored = Enriched & {
   z_mentions: number;
   z_points: number;
   z_recent: number;
+  z_wiki: number;
+  z_reddit: number;
+  z_redditScore: number;
   trending: number;
   growthMoM: number;
 };
@@ -161,29 +208,40 @@ function zScoreByCategory<T extends { category: string }>(
 const zTo100 = (z: number) => clamp(50 + z * 18, 0, 100);
 
 function computeScores(rows: Enriched[]): Scored[] {
-  const z_stars    = zScoreByCategory(rows, (r) => r.raw.githubStars);
-  const z_velocity = zScoreByCategory(rows, (r) => r.raw.githubVelocity);
-  const z_mentions = zScoreByCategory(rows, (r) => r.raw.hnMentions);
-  const z_points   = zScoreByCategory(rows, (r) => r.raw.hnPoints);
-  const z_recent   = zScoreByCategory(rows, (r) => r.raw.hnRecent);
+  const z_stars        = zScoreByCategory(rows, (r) => r.raw.githubStars);
+  const z_velocity     = zScoreByCategory(rows, (r) => r.raw.githubVelocity);
+  const z_mentions     = zScoreByCategory(rows, (r) => r.raw.hnMentions);
+  const z_points       = zScoreByCategory(rows, (r) => r.raw.hnPoints);
+  const z_recent       = zScoreByCategory(rows, (r) => r.raw.hnRecent);
+  const z_wiki         = zScoreByCategory(rows, (r) => r.raw.wikiViews30d);
+  const z_reddit       = zScoreByCategory(rows, (r) => r.raw.redditMentions);
+  const z_redditScore  = zScoreByCategory(rows, (r) => r.raw.redditScore);
 
   return rows.map((r) => {
-    const zS = z_stars.get(r)    ?? 0;
-    const zV = z_velocity.get(r) ?? 0;
-    const zM = z_mentions.get(r) ?? 0;
-    const zP = z_points.get(r)   ?? 0;
-    const zR = z_recent.get(r)   ?? 0;
+    const zS  = z_stars.get(r)       ?? 0;
+    const zV  = z_velocity.get(r)    ?? 0;
+    const zM  = z_mentions.get(r)    ?? 0;
+    const zP  = z_points.get(r)      ?? 0;
+    const zR  = z_recent.get(r)      ?? 0;
+    const zW  = z_wiki.get(r)        ?? 0;
+    const zRd = z_reddit.get(r)      ?? 0;
+    const zRs = z_redditScore.get(r) ?? 0;
 
-    const momentum  = 0.6 * zV + 0.4 * zR;
-    const reach     = 0.5 * zS + 0.5 * zM;
-    const sentiment = zP;
+    // Momentum (short-term): GH velocity + recent HN + Reddit mentions
+    const momentum  = 0.45 * zV + 0.30 * zR + 0.25 * zRd;
+    // Reach (longer-term): GH stars + HN total + Wikipedia views
+    const reach     = 0.35 * zS + 0.30 * zM + 0.35 * zW;
+    // Sentiment: HN points + Reddit upvotes
+    const sentiment = 0.55 * zP + 0.45 * zRs;
 
     const trendingZ = 0.45 * momentum + 0.30 * reach + 0.25 * sentiment;
-    const growthMoM = clamp(zV * 18, -25, 200);
+    // Growth proxy combines GH velocity and Reddit recency
+    const growthMoM = clamp((0.7 * zV + 0.3 * zRd) * 18, -25, 200);
 
     return {
       ...r,
       z_stars: zS, z_velocity: zV, z_mentions: zM, z_points: zP, z_recent: zR,
+      z_wiki: zW, z_reddit: zRd, z_redditScore: zRs,
       trending: Math.round(zTo100(trendingZ) * 10) / 10,
       growthMoM: Math.round(growthMoM * 10) / 10,
     };
@@ -213,17 +271,19 @@ async function main() {
   for (const tool of CATALOG) {
     i++;
     process.stdout.write(`  [${i}/${CATALOG.length}] ${tool.name}…`);
-    const [gh, hn] = await Promise.all([
+    const [gh, hn, wiki, reddit] = await Promise.all([
       fetchGitHub(tool.signals?.github),
       fetchHN(tool.signals?.hn || tool.name),
+      fetchWiki(tool.signals?.wiki),
+      fetchReddit(tool.signals?.reddit || tool.name),
     ]);
-    const raw: RawSignals = { ...gh, ...hn };
+    const raw: RawSignals = { ...gh, ...hn, ...wiki, ...reddit };
     enriched.push({ ...tool, raw });
     process.stdout.write(
-      ` stars=${raw.githubStars ?? "—"}` +
-      ` vel=${raw.githubVelocity ?? "—"}` +
       ` hn=${raw.hnMentions ?? "—"}` +
-      ` pts=${raw.hnPoints ?? "—"}\n`
+      ` rd=${raw.redditMentions ?? "—"}` +
+      ` wiki=${raw.wikiViews30d ?? "—"}` +
+      ` gh=${raw.githubStars ?? "—"}\n`
     );
   }
 
@@ -242,6 +302,9 @@ async function main() {
       githubVelocity: r.raw.githubVelocity,
       hnMentions: r.raw.hnMentions,
       hnPoints: r.raw.hnPoints,
+      redditMentions: r.raw.redditMentions,
+      redditScore: r.raw.redditScore,
+      wikiViews30d: r.raw.wikiViews30d,
       fetchedAt: NOW_ISO,
     },
   }));
