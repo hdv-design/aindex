@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-18T07:04:30.520Z",
+  "generatedAt": "2026-05-19T06:56:13.684Z",
   "tools": [
     {
       "id": "claude",
-      "trending": 51.7,
+      "trending": 51.5,
       "growthMoM": 0,
       "rating": 9.4,
       "monthlyVisits": 142,
@@ -26,13 +26,13 @@
         "hnPoints": 27,
         "redditMentions": 0,
         "redditScore": 0,
-        "wikiViews30d": 298178,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "wikiViews30d": 298564,
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "chatgpt",
-      "trending": 56.4,
+      "trending": 56.7,
       "growthMoM": 0,
       "rating": 8.9,
       "monthlyVisits": 4200,
@@ -52,16 +52,16 @@
       ],
       "liveSignals": {
         "hnMentions": 200,
-        "hnPoints": 17,
+        "hnPoints": 18,
         "redditMentions": 0,
         "redditScore": 0,
-        "wikiViews30d": 2290135,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "wikiViews30d": 2322139,
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "gemini",
-      "trending": 45.7,
+      "trending": 45.6,
       "growthMoM": 0,
       "rating": 8.4,
       "monthlyVisits": 510,
@@ -84,8 +84,8 @@
         "hnPoints": 15,
         "redditMentions": 0,
         "redditScore": 0,
-        "wikiViews30d": 8258,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "wikiViews30d": 8047,
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
@@ -109,12 +109,12 @@
         84
       ],
       "liveSignals": {
-        "hnMentions": 172,
+        "hnMentions": 171,
         "hnPoints": 7,
         "redditMentions": 0,
         "redditScore": 0,
-        "wikiViews30d": 108590,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "wikiViews30d": 109344,
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
@@ -142,13 +142,13 @@
         "hnPoints": 25,
         "redditMentions": 0,
         "redditScore": 0,
-        "wikiViews30d": 60489,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "wikiViews30d": 60726,
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "cursor",
-      "trending": 53.2,
+      "trending": 52.7,
       "growthMoM": 0,
       "rating": 9.2,
       "monthlyVisits": 24,
@@ -167,17 +167,17 @@
         94
       ],
       "liveSignals": {
-        "hnMentions": 92,
-        "hnPoints": 17,
+        "hnMentions": 90,
+        "hnPoints": 15,
         "redditMentions": 0,
         "redditScore": 0,
-        "wikiViews30d": 109152,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "wikiViews30d": 109996,
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "claude-code",
-      "trending": 55.7,
+      "trending": 56.1,
       "growthMoM": -12.6,
       "rating": 9.1,
       "monthlyVisits": 6,
@@ -196,19 +196,19 @@
         89
       ],
       "liveSignals": {
-        "githubStars": 124491,
+        "githubStars": 124776,
         "githubVelocity": 0,
         "hnMentions": 200,
-        "hnPoints": 15,
+        "hnPoints": 16,
         "redditMentions": 0,
         "redditScore": 0,
-        "wikiViews30d": 4074,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "wikiViews30d": 4072,
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "copilot",
-      "trending": 56.2,
+      "trending": 56.4,
       "growthMoM": 0,
       "rating": 8.3,
       "monthlyVisits": 18,
@@ -231,13 +231,13 @@
         "hnPoints": 32,
         "redditMentions": 0,
         "redditScore": 0,
-        "wikiViews30d": 20514,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "wikiViews30d": 20709,
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "v0",
-      "trending": 43.6,
+      "trending": 43.7,
       "growthMoM": 0,
       "rating": 8.6,
       "monthlyVisits": 11,
@@ -260,12 +260,12 @@
         "hnPoints": 0,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "lovable",
-      "trending": 45.6,
+      "trending": 45.8,
       "growthMoM": 0,
       "rating": 8.4,
       "monthlyVisits": 9,
@@ -284,11 +284,11 @@
         88
       ],
       "liveSignals": {
-        "hnMentions": 17,
+        "hnMentions": 18,
         "hnPoints": 6,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
@@ -312,18 +312,18 @@
         84
       ],
       "liveSignals": {
-        "githubStars": 16377,
-        "githubVelocity": 77,
+        "githubStars": 16378,
+        "githubVelocity": 78,
         "hnMentions": 9,
         "hnPoints": 3,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "windsurf",
-      "trending": 48.3,
+      "trending": 47.9,
       "growthMoM": 0,
       "rating": 8.4,
       "monthlyVisits": 4.1,
@@ -342,16 +342,16 @@
         77
       ],
       "liveSignals": {
-        "hnMentions": 113,
-        "hnPoints": 9,
+        "hnMentions": 106,
+        "hnPoints": 8,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "replit",
-      "trending": 50.9,
+      "trending": 51.1,
       "growthMoM": 0,
       "rating": 8,
       "monthlyVisits": 32,
@@ -371,16 +371,16 @@
       ],
       "liveSignals": {
         "hnMentions": 200,
-        "hnPoints": 11,
+        "hnPoints": 10,
         "redditMentions": 0,
         "redditScore": 0,
-        "wikiViews30d": 18668,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "wikiViews30d": 18771,
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "figma-ai",
-      "trending": 45.8,
+      "trending": 46.2,
       "growthMoM": 0,
       "rating": 8,
       "monthlyVisits": 88,
@@ -403,12 +403,12 @@
         "hnPoints": 7,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "framer",
-      "trending": 55.5,
+      "trending": 54.6,
       "growthMoM": 0,
       "rating": 8.1,
       "monthlyVisits": 14,
@@ -428,15 +428,15 @@
       ],
       "liveSignals": {
         "hnMentions": 200,
-        "hnPoints": 8,
+        "hnPoints": 6,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "uizard",
-      "trending": 53,
+      "trending": 52.9,
       "growthMoM": 0,
       "rating": 7.4,
       "monthlyVisits": 1.6,
@@ -455,16 +455,16 @@
         52
       ],
       "liveSignals": {
-        "hnMentions": 126,
+        "hnMentions": 125,
         "hnPoints": 16,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "galileo",
-      "trending": 49.5,
+      "trending": 49.4,
       "growthMoM": 0,
       "rating": 7.8,
       "monthlyVisits": 0.9,
@@ -487,12 +487,12 @@
         "hnPoints": 15,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "magicpath",
-      "trending": 46.2,
+      "trending": 46.9,
       "growthMoM": 0,
       "rating": 8.3,
       "monthlyVisits": 0.6,
@@ -511,16 +511,16 @@
         90
       ],
       "liveSignals": {
-        "hnMentions": 31,
-        "hnPoints": 9,
+        "hnMentions": 29,
+        "hnPoints": 10,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "midjourney",
-      "trending": 56.3,
+      "trending": 56.7,
       "growthMoM": 0,
       "rating": 9,
       "monthlyVisits": 38,
@@ -539,17 +539,17 @@
         85
       ],
       "liveSignals": {
-        "hnMentions": 31,
-        "hnPoints": 6,
+        "hnMentions": 30,
+        "hnPoints": 7,
         "redditMentions": 0,
         "redditScore": 0,
-        "wikiViews30d": 29921,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "wikiViews30d": 29933,
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "flux",
-      "trending": 43.3,
+      "trending": 43,
       "growthMoM": 0,
       "rating": 8.7,
       "monthlyVisits": 5.2,
@@ -568,19 +568,19 @@
         89
       ],
       "liveSignals": {
-        "githubStars": 25549,
-        "githubVelocity": 49,
+        "githubStars": 25555,
+        "githubVelocity": 55,
         "hnMentions": 1,
         "hnPoints": 2,
         "redditMentions": 0,
         "redditScore": 0,
-        "wikiViews30d": 314,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "wikiViews30d": 317,
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "ideogram",
-      "trending": 44.3,
+      "trending": 44,
       "growthMoM": 0,
       "rating": 8.4,
       "monthlyVisits": 19,
@@ -603,12 +603,12 @@
         "hnPoints": 1,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "krea",
-      "trending": 60.7,
+      "trending": 60.3,
       "growthMoM": 0,
       "rating": 8.5,
       "monthlyVisits": 8.8,
@@ -631,12 +631,12 @@
         "hnPoints": 8,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "recraft",
-      "trending": 45.3,
+      "trending": 46.1,
       "growthMoM": 0,
       "rating": 8.2,
       "monthlyVisits": 4.5,
@@ -655,16 +655,16 @@
         70
       ],
       "liveSignals": {
-        "hnMentions": 2,
+        "hnMentions": 14,
         "hnPoints": 2,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "runway",
-      "trending": 43.7,
+      "trending": 43.9,
       "growthMoM": 0,
       "rating": 8.9,
       "monthlyVisits": 16,
@@ -683,12 +683,12 @@
         86
       ],
       "liveSignals": {
-        "hnMentions": 11,
+        "hnMentions": 12,
         "hnPoints": 4,
         "redditMentions": 0,
         "redditScore": 0,
-        "wikiViews30d": 16659,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "wikiViews30d": 16674,
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
@@ -712,17 +712,17 @@
         80
       ],
       "liveSignals": {
-        "hnMentions": 60,
-        "hnPoints": 58,
+        "hnMentions": 57,
+        "hnPoints": 42,
         "redditMentions": 0,
         "redditScore": 0,
-        "wikiViews30d": 64687,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "wikiViews30d": 65973,
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "veo",
-      "trending": 54.1,
+      "trending": 54.3,
       "growthMoM": 0,
       "rating": 8.8,
       "monthlyVisits": 11,
@@ -742,16 +742,16 @@
       ],
       "liveSignals": {
         "hnMentions": 200,
-        "hnPoints": 26,
+        "hnPoints": 17,
         "redditMentions": 0,
         "redditScore": 0,
-        "wikiViews30d": 11744,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "wikiViews30d": 11647,
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "luma",
-      "trending": 43.9,
+      "trending": 43.8,
       "growthMoM": 0,
       "rating": 8.1,
       "monthlyVisits": 9.3,
@@ -774,12 +774,12 @@
         "hnPoints": 0,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "descript",
-      "trending": 53.8,
+      "trending": 53.4,
       "growthMoM": 0,
       "rating": 8.5,
       "monthlyVisits": 6.2,
@@ -799,15 +799,15 @@
       ],
       "liveSignals": {
         "hnMentions": 200,
-        "hnPoints": 10,
+        "hnPoints": 9,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "elevenlabs",
-      "trending": 47.5,
+      "trending": 47.6,
       "growthMoM": 0,
       "rating": 9.1,
       "monthlyVisits": 27,
@@ -826,17 +826,17 @@
         87
       ],
       "liveSignals": {
-        "hnMentions": 60,
+        "hnMentions": 61,
         "hnPoints": 6,
         "redditMentions": 0,
         "redditScore": 0,
-        "wikiViews30d": 46836,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "wikiViews30d": 47754,
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "suno",
-      "trending": 43.3,
+      "trending": 43.2,
       "growthMoM": 0,
       "rating": 8.6,
       "monthlyVisits": 18,
@@ -855,12 +855,12 @@
         83
       ],
       "liveSignals": {
-        "hnMentions": 84,
+        "hnMentions": 82,
         "hnPoints": 4,
         "redditMentions": 0,
         "redditScore": 0,
-        "wikiViews30d": 1844,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "wikiViews30d": 1852,
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
@@ -888,12 +888,12 @@
         "hnPoints": 16,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "notion-ai",
-      "trending": 58.1,
+      "trending": 54.5,
       "growthMoM": 0,
       "rating": 8,
       "monthlyVisits": 142,
@@ -912,17 +912,17 @@
         70
       ],
       "liveSignals": {
-        "hnMentions": 151,
+        "hnMentions": 150,
         "hnPoints": 15,
         "redditMentions": 0,
         "redditScore": 0,
         "wikiViews30d": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "grammarly",
-      "trending": 53.2,
+      "trending": 58.3,
       "growthMoM": 0,
       "rating": 7.9,
       "monthlyVisits": 84,
@@ -941,17 +941,17 @@
         58
       ],
       "liveSignals": {
-        "hnMentions": 37,
-        "hnPoints": 10,
+        "hnMentions": 180,
+        "hnPoints": 11,
         "redditMentions": 0,
         "redditScore": 0,
-        "wikiViews30d": 25571,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "wikiViews30d": 25754,
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "jasper",
-      "trending": 44.8,
+      "trending": 44,
       "growthMoM": 0,
       "rating": 7.2,
       "monthlyVisits": 3.1,
@@ -974,12 +974,12 @@
         "hnPoints": 2,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "sudowrite",
-      "trending": 43.9,
+      "trending": 43.2,
       "growthMoM": 0,
       "rating": 8.4,
       "monthlyVisits": 0.7,
@@ -1002,7 +1002,7 @@
         "hnPoints": 0,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
@@ -1030,7 +1030,7 @@
         "hnPoints": 3,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
@@ -1058,7 +1058,7 @@
         "hnPoints": 0,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
@@ -1086,12 +1086,12 @@
         "hnPoints": 27,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "clay",
-      "trending": 52.1,
+      "trending": 50.5,
       "growthMoM": 0,
       "rating": 9,
       "monthlyVisits": 3.4,
@@ -1114,12 +1114,12 @@
         "hnPoints": 3,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "icon",
-      "trending": 44.3,
+      "trending": 42.6,
       "growthMoM": 0,
       "rating": 8.2,
       "monthlyVisits": 0.4,
@@ -1142,12 +1142,12 @@
         "hnPoints": 0,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "writer",
-      "trending": 53.6,
+      "trending": 56.9,
       "growthMoM": 0,
       "rating": 8,
       "monthlyVisits": 1.6,
@@ -1166,16 +1166,16 @@
         65
       ],
       "liveSignals": {
-        "hnMentions": 2,
-        "hnPoints": 4,
+        "hnMentions": 3,
+        "hnPoints": 3,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "zip",
-      "trending": 44.6,
+      "trending": 44.7,
       "growthMoM": 0,
       "rating": 8.6,
       "monthlyVisits": 0.8,
@@ -1198,7 +1198,7 @@
         "hnPoints": 2,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
@@ -1223,11 +1223,11 @@
       ],
       "liveSignals": {
         "hnMentions": 200,
-        "hnPoints": 32,
+        "hnPoints": 27,
         "redditMentions": 0,
         "redditScore": 0,
         "wikiViews30d": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
@@ -1255,7 +1255,7 @@
         "hnPoints": 0,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
@@ -1280,10 +1280,10 @@
       ],
       "liveSignals": {
         "hnMentions": 200,
-        "hnPoints": 21,
+        "hnPoints": 18,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
@@ -1312,7 +1312,7 @@
         "redditMentions": 0,
         "redditScore": 0,
         "wikiViews30d": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
@@ -1340,7 +1340,7 @@
         "hnPoints": 0,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
@@ -1368,7 +1368,7 @@
         "hnPoints": 0,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
@@ -1392,12 +1392,12 @@
         76
       ],
       "liveSignals": {
-        "hnMentions": 8,
-        "hnPoints": 57,
+        "hnMentions": 19,
+        "hnPoints": 20,
         "redditMentions": 0,
         "redditScore": 0,
-        "wikiViews30d": 317,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "wikiViews30d": 320,
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
@@ -1421,16 +1421,16 @@
         84
       ],
       "liveSignals": {
-        "hnMentions": 5,
-        "hnPoints": 11,
+        "hnMentions": 0,
+        "hnPoints": 0,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "hex",
-      "trending": 52.2,
+      "trending": 54.6,
       "growthMoM": 0,
       "rating": 8.8,
       "monthlyVisits": 1.4,
@@ -1453,12 +1453,12 @@
         "hnPoints": 1,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "julius",
-      "trending": 44.3,
+      "trending": 43,
       "growthMoM": 0,
       "rating": 8,
       "monthlyVisits": 1.9,
@@ -1481,12 +1481,12 @@
         "hnPoints": 0,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "thoughtspot",
-      "trending": 53.5,
+      "trending": 52.5,
       "growthMoM": 0,
       "rating": 7.6,
       "monthlyVisits": 1,
@@ -1505,11 +1505,11 @@
         50
       ],
       "liveSignals": {
-        "hnMentions": 6,
-        "hnPoints": 23,
+        "hnMentions": 4,
+        "hnPoints": 2,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
@@ -1537,12 +1537,12 @@
         "hnPoints": 2,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "raycast-ai",
-      "trending": 50.3,
+      "trending": 50,
       "growthMoM": 0,
       "rating": 8.7,
       "monthlyVisits": 4.3,
@@ -1561,16 +1561,16 @@
         78
       ],
       "liveSignals": {
-        "hnMentions": 6,
+        "hnMentions": 5,
         "hnPoints": 2,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "fyxer",
-      "trending": 58.2,
+      "trending": 58.3,
       "growthMoM": 0,
       "rating": 8.1,
       "monthlyVisits": 0.4,
@@ -1593,12 +1593,12 @@
         "hnPoints": 2,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "reflect",
-      "trending": 42.6,
+      "trending": 42.7,
       "growthMoM": 0,
       "rating": 7.5,
       "monthlyVisits": 0.3,
@@ -1621,7 +1621,7 @@
         "hnPoints": 0,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
@@ -1649,7 +1649,7 @@
         "hnPoints": 3,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
@@ -1673,16 +1673,16 @@
         58
       ],
       "liveSignals": {
-        "hnMentions": 9,
-        "hnPoints": 89,
+        "hnMentions": 7,
+        "hnPoints": 114,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "moveworks",
-      "trending": 48.3,
+      "trending": 54.2,
       "growthMoM": 0,
       "rating": 8,
       "monthlyVisits": 0.4,
@@ -1701,16 +1701,16 @@
         60
       ],
       "liveSignals": {
-        "hnMentions": 3,
+        "hnMentions": 1,
         "hnPoints": 2,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "metaview",
-      "trending": 55.6,
+      "trending": 51.1,
       "growthMoM": 0,
       "rating": 8.4,
       "monthlyVisits": 0.3,
@@ -1729,16 +1729,16 @@
         69
       ],
       "liveSignals": {
-        "hnMentions": 48,
-        "hnPoints": 6,
+        "hnMentions": 1,
+        "hnPoints": 1,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     },
     {
       "id": "paradox",
-      "trending": 46.1,
+      "trending": 44.7,
       "growthMoM": 0,
       "rating": 7.7,
       "monthlyVisits": 0.4,
@@ -1761,7 +1761,7 @@
         "hnPoints": 0,
         "redditMentions": 0,
         "redditScore": 0,
-        "fetchedAt": "2026-05-18T07:04:30.520Z"
+        "fetchedAt": "2026-05-19T06:56:13.684Z"
       }
     }
   ]
